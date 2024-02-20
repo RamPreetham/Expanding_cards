@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Lora:ital@0;1&family=Neonderthaw&family=Raleway:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    background-image:radial-gradient();
+}
+
+.container{
+    display: flex;
+    width: 90vh;
+}
+
+.panel{
+    background-size: auto 110%;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 60px;
+    transition: flex 0.8s ease-out;
+    color: aliceblue;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    -webkit-transition: all 1200ms ease-in;
+
+}
+
+.panel h3{
+    font-size: medium;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel:active{
+    flex: 5;
+}
+
+.panel:active h3{
+    font-size: medium;
+    color: blueviolet;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:720px){
+   .container{
+    width: 100vw;
+   } 
+   .panel:nth-of-type(8),
+   .panel:nth-of-type(9){
+    display:none;
+   }
+}
